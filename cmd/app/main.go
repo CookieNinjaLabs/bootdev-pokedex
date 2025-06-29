@@ -4,8 +4,10 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"time"
 
 	"github.com/cookieninjalabs/bootdev-pokedex/internal/pokeapi"
+	"github.com/cookieninjalabs/bootdev-pokedex/internal/pokecache"
 )
 
 type cliCommand struct {
@@ -39,8 +41,11 @@ func main() {
 			callback:    commandMapb,
 		},
 	}
+	cache := pokecache.NewCache(5 * time.Second)
 
-	cfg := &pokeapi.Config{}
+	cfg := &pokeapi.Config{
+		Cache: cache,
+	}
 
 	scanner := bufio.NewScanner(os.Stdin)
 	for {
