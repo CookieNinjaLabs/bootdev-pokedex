@@ -54,7 +54,7 @@ func main() {
 		} else {
 			err := command.callback(cfg)
 			if err != nil {
-				fmt.Println("Error: %s\n", err)
+				fmt.Printf("error: %v\n", err)
 			}
 		}
 	}
@@ -68,7 +68,8 @@ func commandExit(c *pokeapi.Config) error {
 
 func commandHelp(c *pokeapi.Config) error {
 	fmt.Println("Welcome to the Pokedex!")
-	fmt.Println("Usage:\n")
+	fmt.Println("Usage:")
+	fmt.Println("")
 
 	for k, v := range cmd {
 		fmt.Printf("%s: %s\n", k, v.description)
