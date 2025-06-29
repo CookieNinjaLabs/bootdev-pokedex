@@ -85,7 +85,7 @@ func commandMap(c *pokeapi.Config) error {
 
 	locations, err := pokeapi.GetLocations(c, url)
 	if err != nil {
-		return fmt.Errorf("Error getting locations: %v", err)
+		return fmt.Errorf("error getting locations: %v", err)
 	}
 
 	for _, location := range locations {
@@ -104,7 +104,7 @@ func commandMapb(c *pokeapi.Config) error {
 
 	locations, err := pokeapi.GetLocations(c, url)
 	if err != nil {
-		return fmt.Errorf("Error getting locations: %v", err)
+		return fmt.Errorf("error getting locations: %v", err)
 	}
 
 	for _, location := range locations {
