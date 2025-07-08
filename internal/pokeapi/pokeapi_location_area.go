@@ -10,18 +10,6 @@ const (
 	LocationAreaAPI = "https://pokeapi.co/api/v2/location-area/"
 )
 
-type LocationArea struct {
-	Name string `json:"name"`
-	Url  string `json:"url"`
-}
-
-type LocationResponse struct {
-	Count   int            `json:"count"`
-	Next    string         `json:"next"`
-	Prev    string         `json:"previous"`
-	Results []LocationArea `json:"results"`
-}
-
 type Config struct {
 	Next  string
 	Prev  string

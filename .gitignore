@@ -204,6 +204,6 @@ go.work.sum
 
 .idea/
 bootdev-pokedex
-cmd/app/repl.log
+repl.log
 pokedexcli
 pokedex
